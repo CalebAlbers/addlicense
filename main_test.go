@@ -317,7 +317,7 @@ func TestLicenseHeader(t *testing.T) {
 			"// HYS\n\n",
 		},
 		{
-			[]string{"f.py", "f.sh", "f.yaml", "f.yml", "f.dockerfile", "dockerfile", "f.rb", "gemfile", ".ru", "f.tcl", "f.bzl", "f.pl", "f.pp", ".ps1", ".psd1", ".psm1", "f.nomad", "f.tfvars"},
+			[]string{"f.py", "f.sh", ".bash", ".zsh", "f.yaml", "f.yml", "f.dockerfile", "dockerfile", "f.rb", "gemfile", ".ru", "f.tcl", "f.bzl", "f.pl", "f.pp", ".ps1", ".psd1", ".psm1", "f.nomad", "f.tfvars"},
 			"# HYS\n\n",
 		},
 		{
