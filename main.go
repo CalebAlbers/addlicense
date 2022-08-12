@@ -293,7 +293,7 @@ func licenseHeader(path string, tmpl *template.Template, data licenseData) ([]by
 		lic, err = executeTemplate(tmpl, data, "/**", " * ", " */")
 	case ".cc", ".cpp", ".cs", ".go", ".hcl", ".hh", ".hpp", ".m", ".mm", ".proto", ".rs", ".swift", ".dart", ".groovy", ".v", ".sv":
 		lic, err = executeTemplate(tmpl, data, "", "// ", "")
-	case ".py", ".sh", ".bash", ".zsh", ".yaml", ".yml", ".dockerfile", "dockerfile", ".rb", "gemfile", ".tcl", ".bzl", ".pl", ".pp":
+	case ".py", ".sh", ".bash", ".zsh", ".yaml", ".yml", ".dockerfile", "dockerfile", ".rb", "gemfile", ".nomad", ".ru", ".tcl", ".tfvars", ".bzl", ".pl", ".pp", ".ps1", ".psd1", ".psm1":
 		lic, err = executeTemplate(tmpl, data, "", "# ", "")
 	case ".el", ".lisp":
 		lic, err = executeTemplate(tmpl, data, "", ";; ", "")
@@ -301,7 +301,7 @@ func licenseHeader(path string, tmpl *template.Template, data licenseData) ([]by
 		lic, err = executeTemplate(tmpl, data, "", "% ", "")
 	case ".hs", ".sql", ".sdl":
 		lic, err = executeTemplate(tmpl, data, "", "-- ", "")
-	case ".html", ".xml", ".vue", ".wxi", ".wxl", ".wxs":
+	case ".html", ".htm", ".xml", ".vue", ".wxi", ".wxl", ".wxs":
 		lic, err = executeTemplate(tmpl, data, "<!--", " ", "-->")
 	case ".php":
 		lic, err = executeTemplate(tmpl, data, "", "// ", "")
@@ -331,6 +331,7 @@ var head = []string{
 	"<!doctype",                // HTML doctype
 	"# encoding:",              // Ruby encoding
 	"# frozen_string_literal:", // Ruby interpreter instruction
+	"#\\",                      // Ruby Rack directive https://github.com/rack/rack/wiki/(tutorial)-rackup-howto
 	"<?php",                    // PHP opening tag
 	"# escape",                 // Dockerfile directive https://docs.docker.com/engine/reference/builder/#parser-directives
 	"# syntax",                 // Dockerfile directive https://docs.docker.com/engine/reference/builder/#parser-directives
