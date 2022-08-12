@@ -293,7 +293,7 @@ func licenseHeader(path string, tmpl *template.Template, data licenseData) ([]by
 		lic, err = executeTemplate(tmpl, data, "/**", " * ", " */")
 	case ".cc", ".cpp", ".cs", ".go", ".hcl", ".hh", ".hpp", ".m", ".mm", ".proto", ".rs", ".swift", ".dart", ".groovy", ".v", ".sv":
 		lic, err = executeTemplate(tmpl, data, "", "// ", "")
-	case ".py", ".sh", ".yaml", ".yml", ".dockerfile", "dockerfile", ".rb", "gemfile", ".ru", ".tcl", ".bzl", ".pl", ".pp":
+	case ".py", ".sh", ".yaml", ".yml", ".dockerfile", "dockerfile", ".rb", "gemfile", ".nomad", ".ru", ".tcl", ".tfvars", ".bzl", ".pl", ".pp":
 		lic, err = executeTemplate(tmpl, data, "", "# ", "")
 	case ".el", ".lisp":
 		lic, err = executeTemplate(tmpl, data, "", ";; ", "")
@@ -301,7 +301,7 @@ func licenseHeader(path string, tmpl *template.Template, data licenseData) ([]by
 		lic, err = executeTemplate(tmpl, data, "", "% ", "")
 	case ".hs", ".sql", ".sdl":
 		lic, err = executeTemplate(tmpl, data, "", "-- ", "")
-	case ".html", ".xml", ".vue", ".wxi", ".wxl", ".wxs":
+	case ".html", ".htm", ".xml", ".vue", ".wxi", ".wxl", ".wxs":
 		lic, err = executeTemplate(tmpl, data, "<!--", " ", "-->")
 	case ".php":
 		lic, err = executeTemplate(tmpl, data, "", "// ", "")

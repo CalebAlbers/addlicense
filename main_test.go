@@ -317,7 +317,7 @@ func TestLicenseHeader(t *testing.T) {
 			"// HYS\n\n",
 		},
 		{
-			[]string{"f.py", "f.sh", "f.yaml", "f.yml", "f.dockerfile", "dockerfile", "f.rb", "gemfile", ".ru", "f.tcl", "f.bzl", "f.pl", "f.pp"},
+			[]string{"f.py", "f.sh", "f.yaml", "f.yml", "f.dockerfile", "dockerfile", "f.rb", "gemfile", ".ru", "f.tcl", "f.bzl", "f.pl", "f.pp", "f.nomad", "f.tfvars"},
 			"# HYS\n\n",
 		},
 		{
@@ -333,7 +333,7 @@ func TestLicenseHeader(t *testing.T) {
 			"-- HYS\n\n",
 		},
 		{
-			[]string{"f.html", "f.xml", "f.vue", "f.wxi", "f.wxl", "f.wxs"},
+			[]string{"f.html", "f.htm", "f.xml", "f.vue", "f.wxi", "f.wxl", "f.wxs"},
 			"<!--\n HYS\n-->\n\n",
 		},
 		{
